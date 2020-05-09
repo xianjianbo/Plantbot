@@ -1,0 +1,68 @@
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform
+  - ask_weather
+  - ask_plant_location
+
+entities:
+ - location
+ - plant
+
+slots:
+  location:
+    type: text
+  plant:
+    type: text
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_ask_location
+- utter_you_are_welcome
+- action_search_weather
+- action_search_plant_location
+
+responses:
+  utter_greet:
+  - text: "你好~请问有什么可以帮到您？"
+
+  utter_cheer_up:
+  - text: "给你看看这个，嘻嘻~"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "那个有帮助到你吗？"
+
+  utter_happy:
+  - text: "太好了，加油鸭！"
+
+  utter_goodbye:
+  - text: "拜拜，下次再见~"
+
+  utter_you_are_welcome:
+  - text:"很高兴可以帮助到你，不客气:)"
+
+  utter_iamabot:
+  - text: "我是一个机器人，正在努力学习知识。"
+
+  utter_ask_location:
+  - text: "在哪个位置呢？"
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
